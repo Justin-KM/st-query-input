@@ -76,7 +76,7 @@ function onRender(event) {
   }
 
   console.log("height", _ini_frame_height_, _frame_height_, _max_frame_height_)
-  Streamlit.setFrameHeight(Math.min(_frame_height_, _max_frame_height_)+60)
+  Streamlit.setFrameHeight(Math.min(_frame_height_, _max_frame_height_)+62)
 }
 
 // Render the component whenever python send a "render event"

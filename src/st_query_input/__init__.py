@@ -8,11 +8,11 @@ import streamlit.components.v1 as components
 # and that the code to display that component is in the "frontend" folder
 frontend_dir = (Path(__file__).parent / "frontend").absolute()
 _component_func = components.declare_component(
-	"st_query_input", path=str(frontend_dir)
+	"query_input", path=str(frontend_dir)
 )
 
 # Create the python function that will be called
-def st_query_input(value, height=28, cols=120, max_height=200,
+def query_input(value, height=20, cols=120, max_height=200,
     key: Optional[str] = None,
 ):
     """
@@ -29,7 +29,7 @@ def main():
     st.set_page_config(page_title="test", layout="wide")
 
     st.write("Multiline text input")
-    valiue = st_query_input("my default valueX", height=30, cols=60)
+    valiue = query_input("my default valueX", height=20, cols=60)
     st.write(valiue)
 
 if __name__ == "__main__":
