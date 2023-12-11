@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-query-input",
-    version="0.1.6",
+    version="0.1.7",
     author="Justin Zhang",
     author_email="justin@gmail.com",
     description="multiline text input with resut and submit buttons",
