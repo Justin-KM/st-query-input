@@ -37,7 +37,7 @@ function onRender(event) {
     input.cols = cols;
     input.style.height = height + 'px';
     input.style.fontFamily = font_family;
-    if(value) {
+    if(value !== null && value !== undefined && value !== "") {
       input.value = value;
     }
 
