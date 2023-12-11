@@ -12,7 +12,7 @@ _component_func = components.declare_component(
 )
 
 # Create the python function that will be called
-def query_input(value, height=38, cols=120, max_height=200, submit_label='▶️', reset_label='🔄', on_change=None,
+def query_input(value, height=38, cols=120, max_height=200, submit_label='▶️', reset_label='🔄', font_family="Source Sans Pro, sans-serif",
     key: Optional[str] = None,
 ):
     """
@@ -25,11 +25,10 @@ def query_input(value, height=38, cols=120, max_height=200, submit_label='▶️
         max_height: max height of the component it can expend to.
         submit_label: submit button label, emoji preferred
         reset_label: reset button label, emoji referred
-        on_change: [not available] a callback function called on resetting, submitting, or new line added
+        font_family: font list
     """
     component_value = _component_func(
-        value=value, height=height, cols=cols, max_height=max_height, submit_label=submit_label, reset_label=reset_label, 
-        on_change=on_change,
+        value=value, height=height, cols=cols, max_height=max_height, submit_label=submit_label, reset_label=reset_label, font_family=font_family,
         key=key,
     )
 
@@ -43,7 +42,7 @@ def main():
     st.set_page_config(page_title="test", layout="wide")
 
     st.write("Multiline text input")
-    valiue = query_input("Enter your question here...", height=38, cols=60, submit_label='🎈', reset_label='✨')
+    valiue = query_input("Enter your question here...", height=30, cols=60, submit_label='🎈', reset_label='✨')
     st.write(valiue)
 
 if __name__ == "__main__":

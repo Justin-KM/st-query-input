@@ -22,12 +22,12 @@ function autoGrow(textarea) {
  * the component is initially loaded, and then again every time the
  * component gets new data from Python.
  */
-var _frame_height_ = 38;
-var _ini_frame_height_ = 38;
+var _frame_height_ = 30;
+var _ini_frame_height_ = 30;
 var _max_frame_height_ = 200;
 function onRender(event) {
   if(!window.rendered) {
-    const {value, cols, height, max_height, submit_label, reset_label, on_change} = event.detail.args;
+    const {value, cols, height, max_height, submit_label, reset_label, font_family} = event.detail.args;
 
     _frame_height_ = height;
     _ini_frame_height_ = height
@@ -36,6 +36,7 @@ function onRender(event) {
     const input = document.getElementById("input_box");
     input.cols = cols;
     input.style.height = height + 'px';
+    input.style.fontFamily = font_family;
     if(value) {
       input.value = value;
     }
