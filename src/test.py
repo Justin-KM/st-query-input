@@ -9,7 +9,9 @@ def main():
         st.session_state["question"] = "enter your question here..."
 
     st.write("Multiline text input")
-    value = input_box.query_input(st.session_state["question"], height=38, cols=60)
+    col1, col2, col3 = st.columns([2,8,1])
+    with col2:
+        value = input_box.query_input(st.session_state["question"], height=38, cols=60, key=1)
     st.write(value)
 
     if value is not None and 'submit' in value:
